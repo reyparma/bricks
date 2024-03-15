@@ -1,4 +1,4 @@
-name: starter
+name: starter_app
 description: A new brick created with the Mason CLI.
 
 # The following defines the brick repository url.
@@ -8,7 +8,7 @@ description: A new brick created with the Mason CLI.
 # The following defines the version and build number for your brick.
 # A version number is three numbers separated by dots, like 1.2.34
 # followed by an optional build number (separated by a +).
-version: 0.1.0+3
+version: 0.1.0+1
 
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
@@ -26,8 +26,27 @@ environment:
 #  * a list of values (enums only)
 #  * an optional separator (list only)
 vars:
-  name:
+  appName:
     type: string
-    description: Your name
-    default: Dash
-    prompt: What is your name?
+    description: App name
+    default: starter app
+    prompt: App name?
+  appTitle:
+    type: string
+    description: App title
+    default: Generated Starter App
+    prompt: App title?
+  auth0Domain:
+    type: string
+    description: AUTH0 DOMAIN
+    prompt: AUTH0_DOMAIN?
+  auth0ClientId:
+    type: string
+    description: AUTH0 CLIENT ID
+    prompt: AUTH0_CLIENT_ID?
+  auth0CustomScheme:
+    type: string
+    description: AUTH0 CUSTOM SCHEME
+    default: android
+    prompt: AUTH0_CUSTOM_SCHEME?
+
