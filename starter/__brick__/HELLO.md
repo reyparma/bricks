@@ -1,1 +1,1 @@
-Hola {{name}}!
+Bonjour {{name}}!
