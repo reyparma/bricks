@@ -1,1 +1,1 @@
-Hello {{name}}!
+Konichiwa {{name}}!
