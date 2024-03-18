@@ -4,6 +4,10 @@ This brick creates a Flutter starter app using Auth0 for authentication, BloC fo
 
 TODO: Write instructions on how to use the brick.
 
+1. mkdir test_starter_app
+2. cd test_starter_app
+3. mason init
+
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
 A new brick created with the Mason CLI.
