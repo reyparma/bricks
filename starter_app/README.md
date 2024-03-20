@@ -1,12 +1,12 @@
 # Code Generator - Flutter Starter App with Auth0, BloC and GoRouter
 
-This brick creates a Flutter starter app using Auth0 for authentication, BloC for state management and GoRouter for navigation.
-
-TODO: Write instructions on how to use the brick.
+This brick creates a Flutter starter app with BloC for state management, GoRouter for navigation and Auth0 authentication that can be optionally disabled.
 
 1. mkdir test_starter_app
 2. cd test_starter_app
 3. mason init
+4. mason add starter_app --git-url https://github.com/reyparma/bricks --git-path starter_app
+5. mason make starter_app
 
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
