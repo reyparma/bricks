@@ -2,6 +2,18 @@
 
 This brick creates a Flutter starter app with BloC for state management, GoRouter for navigation and Auth0 authentication that can be optionally disabled.
 
+My environment:
+
+Doctor summary (to see all details, run flutter doctor -v):
+[✓] Flutter (Channel stable, 3.19.3, on macOS 13.3 22E252 darwin-arm64, locale en-US)
+[✓] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
+[✓] Xcode - develop for iOS and macOS (Xcode 14.3)
+[✓] Chrome - develop for the web
+[✓] Android Studio (version 2023.2)
+[✓] VS Code (version 1.87.2)
+[✓] Connected device (4 available)            
+[✓] Network resources
+
 1. mkdir test_starter_app
 2. cd test_starter_app
 3. mason init
