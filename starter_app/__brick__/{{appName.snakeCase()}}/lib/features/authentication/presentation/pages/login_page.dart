@@ -10,8 +10,8 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: const Center(
-            child:
-                Text('{{appTitle}}', style: TextStyle(color: Colors.white)),
+            child: Text('{{appTitle}}',
+                style: TextStyle(color: Colors.white)),
           ),
           backgroundColor: Colors.black87),
       body: Center(

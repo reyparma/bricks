@@ -36,6 +36,11 @@ vars:
     description: App title
     default: Generated Starter App
     prompt: App title?
+  useAuth:
+    type: boolean
+    description: Enable or disable authentication
+    default: true
+    prompt: Enable authentication?
   auth0Domain:
     type: string
     description: AUTH0 DOMAIN

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:{{appName.snakeCase()}}/core/widgets/black_appbar.dart';
 import 'package:{{appName.snakeCase()}}/features/authentication/presentation/bloc/authentication_bloc.dart';
 import 'package:{{appName.snakeCase()}}/features/user_profile/presentation/bloc/user_profile_bloc.dart';
 
@@ -18,8 +20,9 @@ class UserProfilePage extends StatelessWidget {
       } else {
         final userProfile = state.user;
         return Scaffold(
-          appBar: _appBar(
-              '${userProfile!.nickname}', '${userProfile.pictureUrl}', context),
+          appBar: blackAppBar("User Profile", '${userProfile!.nickname}',
+              '${userProfile.pictureUrl}', context),
+
           body: Center(
             child: Padding(
               padding: const EdgeInsets.all(4.0),
@@ -77,6 +80,13 @@ class UserProfilePage extends StatelessWidget {
                         ]),
                       ]),
                 ),
+                const SizedBox(height: 20),
+                TextButton(
+                  onPressed: () {
+                    context.push('/home');
+                  },
+                  child: Text("Quote of the Day"),
+                ),
               ]),
             ),
           ),
@@ -96,28 +106,28 @@ class UserProfilePage extends StatelessWidget {
     return Text(text, style: _textStyle);
   }
 
-  AppBar _appBar(String nickname, String pictureUrl, BuildContext context) {
-    return AppBar(
-        leading: const Icon(Icons.menu, color: Colors.white),
-        title: const Center(
-            child: Text('User Profile', style: TextStyle(color: Colors.white))),
-        backgroundColor: Colors.black87,
-        actions: [
-          _paddedWidget(
-              Text(nickname, style: const TextStyle(color: Colors.white))),
-          CircleAvatar(
-            radius: 16,
-            child: ClipOval(
-              child: Image.network(
-                pictureUrl,
-              ),
-            ),
-          ),
-          IconButton(
-              onPressed: () {
-                context.read<AuthenticationBloc>().add(LogOut());
-              },
-              icon: const Icon(Icons.logout, color: Colors.white))
-        ]);
-  }
+  // AppBar _appBar(String nickname, String pictureUrl, BuildContext context) {
+  //   return AppBar(
+  //       leading: const Icon(Icons.menu, color: Colors.white),
+  //       title: const Center(
+  //           child: Text('User Profile', style: TextStyle(color: Colors.white))),
+  //       backgroundColor: Colors.black87,
+  //       actions: [
+  //         _paddedWidget(
+  //             Text(nickname, style: const TextStyle(color: Colors.white))),
+  //         CircleAvatar(
+  //           radius: 16,
+  //           child: ClipOval(
+  //             child: Image.network(
+  //               pictureUrl,
+  //             ),
+  //           ),
+  //         ),
+  //         IconButton(
+  //             onPressed: () {
+  //               context.read<AuthenticationBloc>().add(LogOut());
+  //             },
+  //             icon: const Icon(Icons.logout, color: Colors.white))
+  //       ]);
+  // }
 }
