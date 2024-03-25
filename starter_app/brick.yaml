@@ -30,28 +30,28 @@ vars:
     type: string
     description: App name
     default: starter app
-    prompt: App name?
+    prompt: "App name:"
   appTitle:
     type: string
     description: App title
     default: Generated Starter App
-    prompt: App title?
+    prompt: "App title:"
   useAuth:
     type: boolean
     description: Enable or disable authentication
     default: true
-    prompt: Enable authentication?
+    prompt: "Enable authentication"
   auth0Domain:
     type: string
     description: AUTH0 DOMAIN
-    prompt: AUTH0_DOMAIN?
+    prompt: "AUTH0_DOMAIN:"
   auth0ClientId:
     type: string
     description: AUTH0 CLIENT ID
-    prompt: AUTH0_CLIENT_ID?
+    prompt: "AUTH0_CLIENT_ID:"
   auth0CustomScheme:
     type: string
     description: AUTH0 CUSTOM SCHEME
     default: android
-    prompt: AUTH0_CUSTOM_SCHEME?
+    prompt: "Android AUTH0_CUSTOM_SCHEME:"
 
