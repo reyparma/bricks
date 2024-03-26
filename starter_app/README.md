@@ -1,24 +1,38 @@
-# Code Generator - Flutter Starter App with Auth0, BloC and GoRouter
+# Code Generator for a Flutter Starter App with Auth0, BloC and GoRouter
 
-This brick creates a Flutter starter app with BloC for state management, GoRouter for navigation and Auth0 authentication that can be optionally disabled.
+This Mason brick creates a Flutter starter app with BloC for state management, GoRouter for navigation and Auth0 authentication that can be optionally disabled.
 
-My environment:
+![allplatforms](https://github.com/reyparma/bricks/assets/5339530/140ea862-8b6f-4dcb-adc1-6d6088467af3)
 
-Doctor summary (to see all details, run flutter doctor -v):
-[✓] Flutter (Channel stable, 3.19.3, on macOS 13.3 22E252 darwin-arm64, locale en-US)
-[✓] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
-[✓] Xcode - develop for iOS and macOS (Xcode 14.3)
-[✓] Chrome - develop for the web
-[✓] Android Studio (version 2023.2)
-[✓] VS Code (version 1.87.2)
-[✓] Connected device (4 available)            
-[✓] Network resources
+You can find the accompanying article here: https://medium.com/@reyparma_53717/reusable-flutter-code-with-bricks-and-mason-394791056a29
+
+General steps to create the starter app:
 
 1. mkdir test_starter_app
 2. cd test_starter_app
 3. mason init
 4. mason add starter_app --git-url https://github.com/reyparma/bricks --git-path starter_app
-5. mason make starter_app
+5. mason make starter_app --on-conflict overwrite
+
+Check the reference at the bottom of this page for the Mason documentation.
+
+# Build Tips
+
+Make sure that your Auth0 settings for Allowed Callback and Logout URLs are in sync with the names used when you create the starter app.
+
+1. WEB - No issues here
+2. ANDROID - You may need to change the plugins section of the android/settings.gradle file depending on the version of Gradle or Kotlin installed on your system.  Here's mine:
+```
+plugins {
+    id "dev.flutter.flutter-plugin-loader" version "1.0.0"
+    id "com.android.application" version "7.3.0" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.0" apply false
+}
+```
+  
+3. IOS - Open Runner.xcworkspace in XCode and edit the team and bundle identifier before running the app.  Ensure the minimum version of IOS is 13.0 in the ios/Podfile.
+
+Reference:
 
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 
