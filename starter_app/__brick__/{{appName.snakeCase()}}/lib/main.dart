@@ -7,5 +7,5 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dotenv.load();
   await setupServiceLocator();
-  runApp(const MyBeautifulApp());
+  runApp(const App());
 }

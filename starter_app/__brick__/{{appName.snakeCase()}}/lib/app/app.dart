@@ -6,8 +6,8 @@ import 'package:{{appName.snakeCase()}}/features/authentication/presentation/blo
 import 'package:{{appName.snakeCase()}}/features/home/presentation/bloc/quote_bloc.dart';
 import 'package:{{appName.snakeCase()}}/features/user_profile/presentation/bloc/user_profile_bloc.dart';
 
-class MyBeautifulApp extends StatelessWidget {
-  const MyBeautifulApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
